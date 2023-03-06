@@ -41,9 +41,20 @@ pipeline {
                         } catch (Exception e) {
                             echo 'Exception occured: ' + e.toString()
                             echo 'Handled the Exception!'
-                        }
                     }
+                }
+                
+        stage('terraform init')
+            steps {
+                sh ('terraform init')
+            }
+        }
+
+        stage ("terraform Apply") {
+            steps {
+                sh 'terraform apply --auto-approve'
                 }
             }
         }
     }
+}{
