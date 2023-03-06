@@ -28,4 +28,19 @@ spec:
         imagePullPolicy: Always
 
 ---
-  
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-service
+  namespace: team4-namespace
+spec:
+  type: LoadBalancer
+  selector:
+    app: flask
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+---
