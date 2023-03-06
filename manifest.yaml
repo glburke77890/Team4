@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: Team4-namespace
+  name: team4-namespace
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-deployment
-  namespace: Team4-namespace
+  namespace: team4-namespace
   labels:
     app: flask
 spec:
