@@ -29,9 +29,9 @@ pipeline {
                     
                         sh 'aws eks update-kubeconfig --region us-east-1 --name Team4-cluster'
 
-
             }
         }
+        
         stage('Create Namespace'){
             steps {
                 script {
@@ -41,16 +41,16 @@ pipeline {
                         } catch (Exception e) {
                             echo 'Exception occured: ' + e.toString()
                             echo 'Handled the Exception!'
-                    }
-                }
-                
-        stage('terraform init')
+               }
+            }
+        }        
+        stage('terraform init'){
             steps {
                 sh ('terraform init')
             }
         }
 
-        stage ("terraform Apply") {
+        stage ("terraform Apply"){
             steps {
                 sh 'terraform apply --auto-approve'
                 }
