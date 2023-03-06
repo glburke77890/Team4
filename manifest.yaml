@@ -25,7 +25,7 @@ spec:
         image: dsassenger/flask
         ports:
         - containerPort: 5000
-        imagePullpolicy: Always
+        imagePullPolicy: Always
 
 ---
   
