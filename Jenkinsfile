@@ -27,7 +27,7 @@ pipeline {
 
                     //Exact same for everyone in the class except the credential variable, use your own credential variable id.  Update kubeconfig in container
                     
-                        sh 'aws eks update-kubeconfig --region us-east-1 --name VETTEC'
+                        sh 'aws eks update-kubeconfig --region us-east-1 --name Team4-cluster'
 
 
             }
