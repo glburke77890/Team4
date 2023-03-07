@@ -1,11 +1,152 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VetTec</title>
+	<title>Social Media Marketing Company</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-  <center><h1 class="content">Welcome to the best empty website I can make</h1></center> 
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="/">Social Media Marketing Co.</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#services">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Header -->
+	<header class="bg-light text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 mx-auto">
+					<h1 class="mt-5">Grow Your Online Presence</h1>
+					<p class="lead mb-5">We're a social media marketing company that helps businesses succeed online.</p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Services -->
+	<section id="services" class="py-5 bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card border-0">
+						<div class="card-body text-center">
+							<i class="fa fa-bullhorn fa-3x mb-3"></i>
+							<h4 class="card-title">Social Media Advertising</h4>
+							<p class="card-text">We'll create targeted ads on social media to help you reach your ideal customers.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card border-0">
+						<div class="card-body text-center">
+							<i class="fa fa-thumbs-up fa-3x mb-3"></i>
+							<h4 class="card-title">Social Media Management</h4>
+							<p class="card-text">We'll manage your social media accounts and post engaging content to help you build your brand.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card border-0">
+						<div class="card-body text-center">
+							<i class="fa fa-line-chart fa-3x mb-3"></i>
+							<h4 class="card-title">Social Media Strategy</h4>
+							<p class="card-text">We'll create a social media strategy that's tailored to your business goals and helps you achieve them.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact -->
+	<section id="contact" class="py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="card border-0">
+						<div class="card-body">
+							<h4 class="card-title">Contact Us</h4>
+							<p class="card-text">Fill out the form below and we'll get back to you within 24 hours.</p>
+							<form action="{{ url_for('contact') }}" method="post">
+								<div class="form-group">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" class="form-control" rows="5" required></textarea>
+								</div>
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card border-0">
+						<div class="card-body">
+							<h4 class="card-title">Contact Info</h4>
+							<ul class="list-unstyled">
+								<li>
+									<i class="fa fa-map-marker"></i>
+									123 Main St.
+									<br>
+									Suite 500
+									<br>
+									New York, NY 10001
+								</li>
+								<li>
+									<i class="fa fa-phone"></i>
+									(123) 456-7890
+								</li>
+								<li>
+									<i class="fa fa-envelope"></i>
+									info@socialmediamarketingco.com
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="py-5 bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>&copy; 2023 Social Media Marketing Co.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>
