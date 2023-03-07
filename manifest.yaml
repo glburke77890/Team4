@@ -26,6 +26,9 @@ spec:
         ports:
         - containerPort: 5000
         imagePullPolicy: Always
+        env:
+        - name: BUCKET_NAME
+          value: my-s3-bucket 
 
 ---
 ---
