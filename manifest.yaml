@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: dsassenger/flask
+        image: dsassenger/flaskapp
         ports:
         - containerPort: 5000
         imagePullPolicy: Always
