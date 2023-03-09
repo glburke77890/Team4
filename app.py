@@ -11,7 +11,7 @@ s3 = boto3.client('s3')
 # Landing page
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('thankyou.html')
 
 # Contact Us form
 @app.route('/contact', methods=['GET', 'POST'])
