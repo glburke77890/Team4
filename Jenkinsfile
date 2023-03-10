@@ -7,8 +7,8 @@ pipeline {
             steps {
                 script{
                     //sign into docker, build image, and push image to dockerhub
-                    withDockerRegistry(credentialsId: 'jenkins') {
-                        docker.build('glburke77890/flaskapp').push('latest')
+                    withDockerRegistry(credentialsId: 'Docker') {
+                        docker.build('dsassenger/flaskapp').push('latest')
                     }
                 }
             }
